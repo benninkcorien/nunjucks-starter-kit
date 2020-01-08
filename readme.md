@@ -19,9 +19,10 @@ I updated all dependencies, and changed the gulp file a little.
 - run `gulp auto` . this will launch browsersync and watch for changes etc.
 - try changing one of the pages inside `src/pages` & your browser will auto-reload, displaying the change you just made.
 
+// TODO new screenshot.
+
 ![https://youtu.be/H7_yhCvQJDk](screenshot.jpg)
 
-See YouTube video: [https://youtu.be/H7_yhCvQJDk](https://youtu.be/H7_yhCvQJDk)
 
 > *Run `gulp minify` if you want to minify your html files inside `dist` folder*
 

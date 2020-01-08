@@ -31,7 +31,7 @@ gulp.task('browserSync', function() {
     });
 });
 
-// TODO reload on sass change
+// TODO reload on SASS change
 
 gulp.task('watch', function() {
     // trigger Nunjucks render when pages or templates changes
