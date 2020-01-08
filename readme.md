@@ -72,10 +72,12 @@ C. with auto-render & auto-reload (via browsersync)
 
 
 ## Page variables
+
+### Set page title
 {% set title = 'Page title' %}
 used in <title> tag
 
-### set active menu item
+### Set active menu item
 thenav.active('pagename')
 
 {% block nav %}
