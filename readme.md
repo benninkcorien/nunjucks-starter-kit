@@ -7,16 +7,17 @@
 
 - This is a fork from [https://github.com/wzulfikar/nunjucks-starter-kit](https://github.com/wzulfikar/nunjucks-starter-kit)
 I updated all dependencies, and changed the gulp file a little.
-- I swapped Bootstrap[https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
+- I swapped Bootstrap [https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
 - I added the bulma SASS source, so  you can comment out parts you don't use, then recompile the bulma CSS file.
+- I renamed all Nunjuck files to .njk to make it clear they're template files.
 
 ### How to start
 
 1. download & unzip: [https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip](https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip)
-- install dependencies: run `yarn install`
-- run `gulp bulma` to compile bulma.css in dist/assets/css/bulma.css
+- install dependencies: run `yarn install` to install everything listed in package.json
+- run `gulp bulma` to compile bulma from node_modules to dist/assets/css/bulma.css
 - run `gulp auto` . this will launch browsersync and watch for changes etc.
-- try change something inside `src/pages` & your browser will auto-reload, displaying the change you just made.
+- try changing one of the pages inside `src/pages` & your browser will auto-reload, displaying the change you just made.
 
 ![https://youtu.be/H7_yhCvQJDk](screenshot.jpg)
 
