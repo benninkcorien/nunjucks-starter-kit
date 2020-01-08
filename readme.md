@@ -12,7 +12,8 @@ I added the bulma SASS source, so  you can comment out parts you don't use, then
 
 1. download & unzip: [https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip](https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip)
 - install dependencies: run `yarn install`
-- run `gulp auto`
+- run `gulp bulma` to compile bulma.css in dist/assets/css/bulma.css
+- run `gulp auto` . this will launch browsersync and watch for changes etc.
 - try change something inside `src/pages` & your browser will auto-reload, displaying the change you just made.
 
 ![https://youtu.be/H7_yhCvQJDk](screenshot.jpg)
@@ -64,6 +65,19 @@ C. with auto-render & auto-reload (via browsersync)
 1. run `gulp auto`
 - it will open `http://localhost:3000` in your browser
 - using this workflow, when you edit `src` the `dist` will be updated (just like workflow B) and your browser (`http://localhost:3000`) will be reloaded automatically.
+
+
+## Page variables
+{% set title = 'Page title' %}
+used in <title> tag
+
+### set active menu item
+thenav.active('pagename')
+
+{% block nav %}
+    {% import 'macros/nav-macro.njk' as thenav %}
+    {{ thenav.active('about')}}
+{% endblock %}
 
 
 ---
