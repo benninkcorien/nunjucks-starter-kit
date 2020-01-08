@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title> 
+        <title>
             {% if title %}
                 {{ title }} | Bulma Layout with Nunjucks
         {% else %}
@@ -25,20 +25,17 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/custom.css">
 
-        <script async
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+        <script async src="/assets/js/jquery-3.4.1.min.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     </head>
- 
+
     <body>
 
         <!-- Navigation -->
@@ -47,25 +44,79 @@
         <!-- Page Content -->
 
         {% block maincontent %}
-        {% endblock %}
+            <div class="columns">
+                <div class="column is-four-fifths">is-four-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-        {% include 'partials/footer.njk' %}
+            <div class="columns">
+                <div class="column is-three-quarters">is-three-quarters</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-        {% block js %}{% endblock %}
+            <div class="columns">
+                <div class="column is-two-thirds">is-two-thirds</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-        <script>
-            $(document).ready(function () {
+            <div class="columns">
+                <div class="column is-three-fifths">is-three-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-                // Check for click events on the navbar burger icon
-                $(".navbar-burger").click(function () {
+            <div class="columns">
+                <div class="column is-half">is-half</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    $(".navbar-burger").toggleClass("is-active");
-                    $(".navbar-menu").toggleClass("is-active");
+            <div class="columns">
+                <div class="column is-two-fifths">is-two-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-                });
+            <div class="columns">
+                <div class="column is-one-third">is-one-third</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-one-quarter">is-one-quarter</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-one-fifth">is-one-fifth</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
+        </div>
+    {% endblock maincontent %}
+
+    {% include 'partials/footer.njk' %}
+
+    {% block js %}{% endblock %}
+
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 
 </html>

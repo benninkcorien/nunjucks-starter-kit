@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title> 
+        <title>
             
                 Contact us | Bulma Layout with Nunjucks
         
@@ -23,20 +23,17 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/custom.css">
 
-        <script async
-			  src="https://code.jquery.com/jquery-3.4.1.min.js"
-			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			  crossorigin="anonymous"></script>
+        <script async src="/assets/js/jquery-3.4.1.min.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     </head>
- 
+
     <body>
 
         <!-- Navigation -->
@@ -114,87 +111,88 @@
         <!-- Page Content -->
 
         
- <div class="columns">
-  <div class="column is-four-fifths">is-four-fifths</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-four-fifths">is-four-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-three-quarters">is-three-quarters</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-three-quarters">is-three-quarters</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-two-thirds">is-two-thirds</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-two-thirds">is-two-thirds</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-three-fifths">is-three-fifths</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-three-fifths">is-three-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-half">is-half</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-half">is-half</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-two-fifths">is-two-fifths</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-two-fifths">is-two-fifths</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-one-third">is-one-third</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-one-third">is-one-third</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-one-quarter">is-one-quarter</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
+            <div class="columns">
+                <div class="column is-one-quarter">is-one-quarter</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
 
-<div class="columns">
-  <div class="column is-one-fifth">is-one-fifth</div>
-  <div class="column">Auto</div>
-  <div class="column">Auto</div>
-</div>
-</div>
+            <div class="columns">
+                <div class="column is-one-fifth">is-one-fifth</div>
+                <div class="column">Auto</div>
+                <div class="column">Auto</div>
+            </div>
+        </div>
+    
 
-
-        <footer class="footer">
+    <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      &copy; <span id="year"></span>
     </p>
   </div>
 </footer>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script> 
 
-        
+    
 
-        <script>
-            $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-                // Check for click events on the navbar burger icon
-                $(".navbar-burger").click(function () {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
 
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    $(".navbar-burger").toggleClass("is-active");
-                    $(".navbar-menu").toggleClass("is-active");
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
 
-                });
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 
 </html>
