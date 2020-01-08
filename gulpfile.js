@@ -31,15 +31,13 @@ gulp.task('browserSync', function() {
     });
 });
 
-// TODO reload on SASS change
-
 gulp.task('watch', function() {
     // trigger Nunjucks render when pages or templates changes
     // File support for .html .njk .js .css
     gulp.watch([PATHS.pages + '/**/*.+(njk)', PATHS.templates + '/**/*.+(njk)'], gulp.series('nun'));
     gulp.watch([PATHS.srcpath + '/sass/*.sass'], gulp.series('sass'));
     // reload browsersync when `dist` changes
-    gulp.watch(PATHS.output + '/*').on('change', browserSync.reload);
+    gulp.watch([PATHS.output + '/**/*.*']).on('change', browserSync.reload);
 });
 
 gulp.task('minify', function() {
