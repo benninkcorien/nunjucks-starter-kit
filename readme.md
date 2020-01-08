@@ -4,9 +4,10 @@
 - Node: [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
 ## Fork
-This is a fork from [https://github.com/wzulfikar/nunjucks-starter-kit](https://github.com/wzulfikar/nunjucks-starter-kit)
-I swapped Bootstrap[https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
-I added the bulma SASS source, so  you can comment out parts you don't use, then recompile the bulma CSS file.
+
+- This is a fork from [https://github.com/wzulfikar/nunjucks-starter-kit](https://github.com/wzulfikar/nunjucks-starter-kit)
+- I swapped Bootstrap[https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
+- I added the bulma SASS source, so  you can comment out parts you don't use, then recompile the bulma CSS file.
 
 ### How to start
 
