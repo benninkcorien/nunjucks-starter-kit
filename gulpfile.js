@@ -1,5 +1,5 @@
 // gulpfile.js
-const gulp  = require('gulp'),
+var gulp  = require('gulp'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
     nunjucksRender = require('gulp-nunjucks-render'); // importing the plugin
@@ -11,7 +11,7 @@ const PATHS = {
 }
 
 // writing up the gulp nunjucks task
-gulp.task('nunjucks', function() {
+gulp.task('nun', function() {
     console.log('Rendering nunjucks files..');
     return gulp.src(PATHS.pages + '/**/*.+(html|js|css)')
         .pipe(nunjucksRender({
@@ -31,7 +31,8 @@ gulp.task('browserSync', function() {
 
 gulp.task('watch', function() {
     // trigger Nunjucks render when pages or templates changes
-    gulp.watch([PATHS.pages + '/**/*.+(html|js|css)', PATHS.templates + '/**/*.+(html|js|css)'], ['nunjucks'])
+    // File support for .html .njk .js .css
+    gulp.watch([PATHS.pages + '/**/*.+(html|njk|js|css)', PATHS.templates + '/**/*.+(html|njk|js|css)'], gulp.series('nun'));
     
     // reload browsersync when `dist` changes
     gulp.watch(PATHS.output + '/*').on('change', browserSync.reload);
@@ -50,7 +51,7 @@ gulp.task('minify', function() {
 });
 
 // run browserSync auto-reload together with nunjucks auto-render
-gulp.task('auto', ['browserSync', 'watch']);
+gulp.task('auto', gulp.series(gulp.parallel('browserSync', 'watch'), function() {} ));
 
 //default task to be run with gulp
-gulp.task('default', ['nunjucks']);
+gulp.task('default', gulp.series('nun'), function() {});

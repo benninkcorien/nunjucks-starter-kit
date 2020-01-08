@@ -3,9 +3,15 @@
 ## Requirement
 - Node: [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
+## Fork
+This is a fork from [https://github.com/wzulfikar/nunjucks-starter-kit](https://github.com/wzulfikar/nunjucks-starter-kit)
+I swapped Bootstrap[https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
+I added the bulma SASS source, so  you can comment out parts you don't use, then recompile the bulma CSS file.
+
 ### How to start
-1. download & unzip: [https://github.com/wzulfikar/nunjucks-starter-kit/archive/master.zip](https://github.com/wzulfikar/nunjucks-starter-kit/archive/master.zip)
-- install dependencies: run `npm i`
+
+1. download & unzip: [https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip](https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip)
+- install dependencies: run `yarn install`
 - run `gulp auto`
 - try change something inside `src/pages` & your browser will auto-reload, displaying the change you just made.
 
@@ -19,7 +25,7 @@ See YouTube video: [https://youtu.be/H7_yhCvQJDk](https://youtu.be/H7_yhCvQJDk)
 
 # Why?
 - works out of the box! 
-- example included (using bootstrap css): 
+- example included (using bulma css): 
   - `src/pages` for page content
   - `src/templates` for page layout
 - output is plain html (stored in `dist` directory)
