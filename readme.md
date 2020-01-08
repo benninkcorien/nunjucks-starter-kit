@@ -6,6 +6,7 @@
 ## Fork
 
 - This is a fork from [https://github.com/wzulfikar/nunjucks-starter-kit](https://github.com/wzulfikar/nunjucks-starter-kit)
+I updated all dependencies, and changed the gulp file a little.
 - I swapped Bootstrap[https://getbootstrap.com/](https://getbootstrap.com/) for Bulma [bulma.io/](bulma.io/)
 - I added the bulma SASS source, so  you can comment out parts you don't use, then recompile the bulma CSS file.
 
