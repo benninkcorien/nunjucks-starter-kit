@@ -1,4 +1,4 @@
-# Nunjucks Starter Kit
+# Nunjucks Bulma Starter Kit
 
 ## Requirement
 - Node: [https://nodejs.org/en/download](https://nodejs.org/en/download)
@@ -14,6 +14,10 @@ I updated all dependencies, and changed the gulp file a little.
 ### How to start
 
 1. download & unzip: [https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip](https://github.com/benninkcorien/nunjucks-starter-kit/archive/master.zip)
+or
+
+    git clone https://github.com/benninkcorien/nunjucks-starter-kit.git
+
 - install dependencies: run `yarn install` to install everything listed in package.json
 - run `gulp bulma` to compile bulma from node_modules to dist/assets/css/bulma.css
 - run `gulp auto` . this will launch browsersync and watch for changes etc.
@@ -87,4 +91,9 @@ thenav.active('pagename')
 
 ---
 
+## Changelog
+
+Added automated CSS/JS version numbering (via gulp).
+
+---
 Nunjucks official docs: [https://mozilla.github.io/nunjucks]([https://mozilla.github.io/nunjucks)

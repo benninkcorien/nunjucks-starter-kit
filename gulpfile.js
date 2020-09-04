@@ -3,6 +3,7 @@ var gulp  = require('gulp'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
     nunjucksRender = require('gulp-nunjucks-render'),
+    version = require('gulp-version-number'),
     sass = require("gulp-sass");
 
 const PATHS = {
@@ -11,6 +12,13 @@ const PATHS = {
     templates: 'src/templates',
     pages: 'src/pages',
 }
+const versionConfig = {
+    'value': '%MDS%',
+    'append': {
+        'key': 'v',
+        'to': ['css', 'js'],
+    },
+};
 
 // writing up the gulp nunjucks task
 gulp.task('nun', function() {
@@ -20,6 +28,7 @@ gulp.task('nun', function() {
           path: [PATHS.templates],
           watch: true,
         }))
+        .pipe(version(versionConfig))
         .pipe(gulp.dest(PATHS.output));
 });
 
