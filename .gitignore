@@ -2,3 +2,4 @@ icon
 !node_modules/
 node_modules/*
 !node_modules/bulma/
+dist
